@@ -1,0 +1,13 @@
+/.classpath
+/.gradle
+/.idea
+*.iml
+/.project
+/.settings
+build/
+Logs/
+*.log
+out/
+classes/
+.DS_Store
+.scannerwork/

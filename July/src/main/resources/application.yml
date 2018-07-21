@@ -1,0 +1,8 @@
+server:
+  port: 8080
+
+monitoring:
+  ports:
+    - 9000
+    - 9001
+    - 9002
