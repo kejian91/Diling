@@ -8,15 +8,13 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "monitoring")
 public class Monitoring {
-    public List<String> getPorts() {
-        return ports;
+    List<String> clients;
+
+    public List<String> getClients() {
+        return clients;
     }
 
-    public void setPorts(List<String> ports) {
-        this.ports = ports;
+    public void setClients(List<String> clients) {
+        this.clients = clients;
     }
-
-    List<String> ports;
-
-
 }

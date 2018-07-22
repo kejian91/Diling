@@ -1,10 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap-datepicker3.min.css}" rel="stylesheet">
+    <link th:href="@{/css/select2.min.css}" rel="stylesheet">
+    <link th:href="@{/css/ie10-viewport-bug-workaround.css}" rel="stylesheet">
+    <link th:href="@{/css/starter-template.css}" rel="stylesheet">
+    <script th:src="@{/js/ie-emulation-modes-warning.js}"></script>
 </head>
+
 <body>
-    Home Page
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">设备监控系统</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="starter-template">
+        <div class="panel panel-default">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>通过量</th>
+                    <th>可识别</th>
+                    <th>未识别</th>
+                    <th>识别率</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>995</td>
+                    <td>805</td>
+                    <td>190</td>
+                    <td>80.90%</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <button type="button" class="btn btn-primary details" style="margin-right: 10px;">详细通过数据</button>
+    </div>
+</div><!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{/js/vendor/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+<script th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
+<script type="text/javascript">
+  (function () {
+  })();
+</script>
 </body>
 </html>
