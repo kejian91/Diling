@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +29,15 @@ public class ProcessService {
     @Autowired
     private RecordRepository recordRepository;
 
-    //@Async
+    @Transactional
+    public void saveRecord(String data, Date date, String port) {
+        Record record = new Record();
+        record.setData(data);
+        record.setDate(date);
+        record.setPort(port);
+        recordRepository.save(record);
+    }
+
     @Transactional
     public void processRecords() {
         List<Record> recordList = recordRepository.getUnprocessedRecords();

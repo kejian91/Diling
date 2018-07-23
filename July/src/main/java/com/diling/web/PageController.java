@@ -11,4 +11,9 @@ public class PageController {
     public String homePage() {
         return "home";
     }
+
+    @GetMapping(value = "/details")
+    public String detailsPage() {
+        return "details";
+    }
 }
