@@ -37,4 +37,16 @@ public class Result {
     public void setIdentifiedRate(double identifiedRate) {
         this.identifiedRate = identifiedRate;
     }
+
+    public void addPassNumber() {
+        this.passNumber++;
+    }
+
+    public void addIdentifiedNumber() {
+        this.identifiedNumber++;
+    }
+
+    public void addUnidentifiedNumber() {
+        this.unidentifiedNumber++;
+    }
 }

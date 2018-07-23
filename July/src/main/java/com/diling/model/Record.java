@@ -17,6 +17,22 @@ public class Record {
     @JoinColumn(name = "product_id")
     private Product product;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
     public String getPort() {
         return port;
     }

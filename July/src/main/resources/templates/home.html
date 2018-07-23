@@ -48,10 +48,10 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>995</td>
-                    <td>805</td>
-                    <td>190</td>
-                    <td>80.90%</td>
+                    <td id="passNumber"></td>
+                    <td id="identifiedNumber"></td>
+                    <td id="unidentifiedNumber"></td>
+                    <td><span id="identifiedRate"></span>%</td>
                 </tr>
                 </tbody>
             </table>
@@ -69,6 +69,17 @@
 <script th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
 <script type="text/javascript">
   (function () {
+      var resultURL = "http://" + window.location.host + "/result";
+      $.ajax({
+          url: resultURL,
+          dataType: "json",
+          success: function(data) {
+              $("#passNumber").text(data.passNumber);
+              $("#identifiedNumber").text(data.identifiedNumber);
+              $("#unidentifiedNumber").text(data.unidentifiedNumber);
+              $("#identifiedRate").text((data.identifiedRate * 100));
+          }
+      })
   })();
 </script>
 </body>

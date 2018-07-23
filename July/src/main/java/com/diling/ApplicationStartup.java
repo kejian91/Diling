@@ -15,7 +15,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class ApplicationStartup {
     private static Logger logger = LoggerFactory.getLogger(ApplicationStartup.class);
     @Autowired

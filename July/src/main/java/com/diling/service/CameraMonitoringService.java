@@ -24,7 +24,7 @@ public class CameraMonitoringService {
                 BufferedReader in = new BufferedReader(new InputStreamReader(is));
                 String socketInput;
                 StringBuilder messageBuilder = new StringBuilder();
-                while ((socketInput = in.readLine()) != null) {
+                while ("end".equals(socketInput = in.readLine())) {
                     messageBuilder.append(socketInput);
                 }
                 logger.info("Receive message from port=" + port + " is '" + messageBuilder.toString() + "'");

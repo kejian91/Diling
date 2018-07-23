@@ -3,6 +3,7 @@ package com.diling.web;
 import com.diling.model.Record;
 import com.diling.model.Result;
 import com.diling.repository.RecordRepository;
+import com.diling.service.QueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,8 @@ public class RecordController {
 
     @Autowired
     private RecordRepository recordRepository;
+    @Autowired
+    private QueryService queryService;
 
     @GetMapping("/records")
     public List<Record> getRecords() {
@@ -22,7 +25,6 @@ public class RecordController {
 
     @GetMapping("/result")
     public Result getResult() {
-        Result result = new Result();
-        return result;
+        return queryService.getResult();
     }
 }
