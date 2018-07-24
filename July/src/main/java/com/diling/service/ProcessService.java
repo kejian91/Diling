@@ -31,6 +31,7 @@ public class ProcessService {
 
     @Transactional
     public void saveRecord(String data, Date date, String port) {
+        logger.info("saveRecord: data=" + data + ", date=" + date + ", port=" + port);
         Record record = new Record();
         record.setData(data);
         record.setDate(date);

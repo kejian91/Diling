@@ -9,12 +9,14 @@ import org.springframework.stereotype.Service;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 @Service
 public class QueryService {
 
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     @Autowired
     private ProductRepository productRepository;
     @Autowired
@@ -40,5 +42,9 @@ public class QueryService {
             result.setIdentifiedRate(Double.parseDouble(dFormat.format(rate)));
         }
         return result;
+    }
+
+    public List<Product> getProducts(Date date) {
+        return productRepository.findProductByDate(sdf.format(date));
     }
 }
