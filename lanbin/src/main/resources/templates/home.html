@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>控制棒零部件尺寸自动测量系统</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main role="main" style="
+    margin-top: 5rem!important;">
+
+    <div class="container">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;">测量</button>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;">标准件精度校正</button>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;" id="exit">退出系统</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="text-muted" style="
+    margin-top: 5rem!important;">
+    <div class="container">
+        <img alt="logo" title="logo" th:src="@{/assets/footer.jpg}">
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{/js/vendor/jquery-slim.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/vendor/popper.min.js}"></script>
+<script th:src="@{/js/vendor/holder.min.js}"></script>
+<script type="text/javascript">
+  (function () {
+      $("#exit").on("click", function(){
+        window.close();
+      })
+  })();
+</script>
+</body>
+</html>

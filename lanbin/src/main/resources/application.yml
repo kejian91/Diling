@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+monitoring:
+  clients:
+    - 127.0.0.1:9000
+    - 127.0.0.1:9001
+    - 127.0.0.1:9002
+  delay: 500
+spring:
+  datasource:
+    url: jdbc:h2:file:~/.h2/diling
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    max-active: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  jackson:
+    serialization:
+      indent-output: true
