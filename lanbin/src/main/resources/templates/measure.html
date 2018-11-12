@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/sticky-footer.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>控制棒零部件尺寸自动测量系统</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main role="main" style="margin-top: 3rem !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">工件选择</h4>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <select class="custom-select d-block w-100" id="country" required="">
+                            <option value="">工件1</option>
+                            <option>工件2</option>
+                            <option>工件3</option>
+                            <option>工件4</option>
+                            <option>工件5</option>
+                            <option>工件6</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-primary btn-lg btn-block" id="yes">确认</button>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <button class="btn btn-secondary btn-lg btn-block" id="back">返回</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <div class="card flex-md-row mb-4 shadow-sm h-md-250">
+                            <img class="card-img-right flex-auto d-none d-lg-block" style="width: 300px; height: 250px;"
+                                 th:src="@{/assets/item.jpg}">
+                            <img class="card-img-right flex-auto d-none d-lg-block" style="width: 300px; height: 250px;"
+                                 th:src="@{/assets/item.jpg}">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <p class="card-text mb-auto">工件数据1</p>
+                                <p class="card-text mb-auto">工件数据2</p>
+                                <p class="card-text mb-auto">工件数据3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <img alt="logo" title="logo" th:src="@{/assets/footer.jpg}">
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{/js/vendor/jquery-slim.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/vendor/popper.min.js}"></script>
+<script th:src="@{/js/vendor/holder.min.js}"></script>
+<script type="text/javascript">
+    (function () {
+        $("#back").on("click", function(){
+            window.history.back();
+        });
+    })();
+</script>
+</body>
+</html>

@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/sticky-footer.css}" rel="stylesheet">
 </head>
 
 <body>
@@ -24,33 +25,23 @@
     </div>
 </header>
 
-<main role="main" style="
-    margin-top: 5rem!important;">
-
+<main role="main" style="margin-top: 3rem !important;">
     <div class="container">
         <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;">测量</button>
-                </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-lg btn-block btn-primary" style="height:100px;width: 300px;" id="measure">测量</button>
             </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;">标准件精度校正</button>
-                </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-lg btn-block btn-primary" style="height:100px;width: 300px;">标准件精度校正</button>
             </div>
-            <div class="card mb-4 shadow-sm">
-                <div class="card-body">
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary" style="height:100px;" id="exit">退出系统</button>
-                </div>
+            <div class="card-body">
+                <button type="button" class="btn btn-lg btn-block btn-primary" style="height:100px;width: 300px;" id="exit">退出系统</button>
             </div>
         </div>
     </div>
-
 </main>
 
-<footer class="text-muted" style="
-    margin-top: 5rem!important;">
+<footer class="footer">
     <div class="container">
         <img alt="logo" title="logo" th:src="@{/assets/footer.jpg}">
     </div>
@@ -67,7 +58,10 @@
   (function () {
       $("#exit").on("click", function(){
         window.close();
-      })
+      });
+      $("#measure").on("click", function(){
+          window.location.href = "/measure";
+      });
   })();
 </script>
 </body>
